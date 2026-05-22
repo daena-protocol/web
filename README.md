@@ -1,6 +1,6 @@
 # web
 
-The source for [daena.org](https://daena.org).
+The source for [daena-protocol.org](https://daena-protocol.org).
 
 Right now it's a single static page: the Daena manifesto with a hero, the full essay, and links to the other repos. No build step, no framework — just one `index.html` you can host anywhere.
 
@@ -26,7 +26,7 @@ Drop `index.html` on any static host:
 
 - **Cloudflare Pages / Vercel / Netlify** — connect this repo, point at `main`, ship.
 - **GitHub Pages** — enable Pages in repo settings, set source to `main`.
-- **A CDN bucket** — `aws s3 cp index.html s3://daena.org/index.html`.
+- **A CDN bucket** — `aws s3 cp index.html s3://daena-protocol.org/index.html`.
 
 Once the domain is registered, the live site is just `index.html` at the root.
 
@@ -34,7 +34,7 @@ Once the domain is registered, the live site is just `index.html` at the root.
 
 This is the *recruiting* page. It exists so a developer, publisher, or curious reader who hears about Daena has a clean place to land, understand the pitch, and click through to the code.
 
-It is **not** the documentation site. Once we have enough to document, real docs will live at `daena.org/docs` — likely an Astro or VitePress build, sourcing content from this repo's expanded structure plus the spec repo.
+It is **not** the documentation site. Once we have enough to document, real docs will live at `daena-protocol.org/docs` — likely an Astro or VitePress build, sourcing content from this repo's expanded structure plus the spec repo.
 
 ## License
 

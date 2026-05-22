@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daena is an open protocol for an agent-native internet — a second layer where every publisher exposes a signed, structured, verifiable source of truth.">
+  <meta property="og:title" content="Daena — the truth layer of the internet">
+  <meta property="og:description" content="The web was built for eyes. The next one will be built for minds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://daena.org">
+  <title>Daena — the truth layer of the internet</title>
+  <style>
+    :root {
+      --accent: #b91c1c;
+      --fg: #1a1a1a;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --rule: #e5e7eb;
+      --code: #f6f6f4;
+      --max: 660px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f3f3ef;
+        --muted: #9ca3af;
+        --bg: #0f0f0e;
+        --rule: #27272a;
+        --code: #1a1a18;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: ui-serif, "Iowan Old Style", "Apple Garamond", Baskerville, Georgia, "Times New Roman", serif;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 18px;
+      padding: 4rem 1.25rem 6rem;
+    }
+    .container { max-width: var(--max); margin: 0 auto; }
+
+    header { margin-bottom: 4rem; }
+    .wordmark {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 {
+      margin-top: 0.5rem;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    .subtitle {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1.125rem;
+    }
+
+    h2 {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p { margin-bottom: 1.1rem; }
+    p strong { font-weight: 700; }
+    p em { font-style: italic; color: var(--fg); }
+    p.lead { font-size: 1.25rem; line-height: 1.5; }
+
+    ol, ul { padding-left: 1.5rem; margin-bottom: 1.1rem; }
+    ol li, ul li { margin-bottom: 0.3rem; }
+    ol { list-style: decimal; }
+
+    a {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 0.18em;
+      text-decoration-thickness: 1.5px;
+    }
+    a:hover { color: var(--accent); }
+
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    .actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.875rem;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      text-decoration: none;
+      color: var(--fg);
+    }
+    .actions a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .actions a.primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .actions a.primary:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    code {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--code);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.875rem;
+    }
+    footer p { margin-bottom: 0.5rem; }
+    footer a { color: var(--muted); }
+
+    /* Larger screens get slightly looser typography */
+    @media (min-width: 720px) {
+      body { font-size: 19px; padding-top: 6rem; }
+      h1 { font-size: 2.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="wordmark">Daena</div>
+      <h1>The truth layer of the internet.</h1>
+      <p class="subtitle">The web was built for eyes. The next one will be built for minds.</p>
+      <div class="actions">
+        <a class="primary" href="https://github.com/daena-protocol">Read the code on GitHub →</a>
+        <a href="https://github.com/daena-protocol/spec">Spec</a>
+        <a href="https://github.com/daena-protocol/examples">Examples</a>
+        <a href="#manifesto">Manifesto</a>
+      </div>
+    </header>
+
+    <article id="manifesto">
+
+      <p class="lead">I want to be done with websites.</p>
+
+      <p>Not the internet. Websites. The thing where I open a tab, scroll past a cookie banner, dismiss a chatbot, close a popup, hunt through a hamburger menu, and finally find — maybe — the answer to a question I could have asked in five words.</p>
+
+      <p>The internet is good. The internet has been ruined.</p>
+
+      <p>Three things, that's all I want:</p>
+
+      <ol>
+        <li>Let me ask a question.</li>
+        <li>Give me a correct answer.</li>
+        <li>No hallucinations.</li>
+      </ol>
+
+      <p>The strange thing is, the technology to do this already exists. The reason it doesn't happen is that the entire web was designed around the wrong unit. The website is a <em>visual</em> artifact, a thing for human eyes to scan. Computers — including the AI agents that now act for us — have to scrape, parse, and infer to extract anything useful from it. Half the time they get it wrong. The rest of the time, you didn't actually need a 200ms page render — you needed three lines of structured data.</p>
+
+      <p>The fix is not a better website. The fix is a second layer.</p>
+
+      <h2>A web with two layers</h2>
+
+      <p>Picture the internet as it works today: humans browse, agents scrape. One pipe, built for eyes, with software cosplaying as a human to read it.</p>
+
+      <p>Now picture it with two layers.</p>
+
+      <p>The <strong>agent layer</strong> is canonical. Every publisher exposes a structured, signed, cryptographically verifiable source of truth — their facts, their capabilities, their hours, their prices. Agents read it directly. No HTML in the loop. No hallucination, because every fact carries a signature from the publisher.</p>
+
+      <p>The <strong>human layer</strong> is derived. When a person wants to look at the data themselves, a renderer turns it into a clean, readable page — automatically. The publisher doesn't hand-code a website. The site is just one of many views of the same data.</p>
+
+      <p>The same document, two interfaces. Humans don't lose their web; they get a better one — because it's generated from structured truth instead of typeset by some company's marketing team.</p>
+
+      <p>In Avestan, <em>daena</em> means <em>one's truthful self, made visible</em>. That is what every publisher commits to when they join: their facts, attested with their key, accountable to their identity.</p>
+
+      <h2>Asha and Druj</h2>
+
+      <p>The old Persians had two words for the order of the world.</p>
+
+      <p><em>Asha</em> is truth — not a moral preference, but a structural property. The universe is ordered by Asha; reality and accuracy are the same thing.</p>
+
+      <p><em>Druj</em> is the lie — the disorder that distorts what is real.</p>
+
+      <p>The current web is full of Druj. Hallucinated facts. Stale prices. Manipulative summaries. Paid placements masquerading as recommendations. Pages that obey a publisher's intent more than the user's question. The agents we deploy on top of all this inherit it.</p>
+
+      <p>Daena is a protocol that puts Asha back. Every fact is cryptographically attested. Every modification breaks the signature. Every agent that trusts a Daena document does so on math, not vibes. The structure of the system makes Druj harder than Asha — for the first time in the internet's history.</p>
+
+      <h2>What it is, concretely</h2>
+
+      <p>Daena Protocol v0 is a small, sharp specification with a complete reference implementation in TypeScript:</p>
+
+      <ul>
+        <li>A document format: facts, capabilities, render hints, signature — all in JSON.</li>
+        <li>A signing layer: ed25519 over canonicalized content, verifiable against the publisher's DID.</li>
+        <li>A consumer surface for agents: fetch, verify, query, act — verified by default.</li>
+        <li>A renderer that turns the same document into a human web page when needed.</li>
+      </ul>
+
+      <p>Publishers can scaffold, sign, validate, and ship a document in four commands. Agents can read it with one. The protocol is open, permissively licensed, and lives in public at <a href="https://github.com/daena-protocol">github.com/daena-protocol</a>.</p>
+
+      <p>It is pre-alpha. The spec will move. The packages will rev. Anyone who shows up early helps shape what v1 looks like.</p>
+
+      <h2>The call</h2>
+
+      <p>If you <strong>publish things</strong> — a restaurant, a clinic, a library, a city services portal, a documentation site, a product catalog — try Daena. Sign your data. Be a verifiable source.</p>
+
+      <p>If you <strong>build agents</strong> — chat assistants, research tools, browsing copilots, any software that acts on a person's behalf — try Daena. Read from verifiable sources. Stop guessing what some HTML page meant.</p>
+
+      <p>If you <strong>build infrastructure</strong> — content management, search, payments, identity — help define the rails. Open a discussion, file a <a href="https://github.com/daena-protocol/spec/tree/main/proposals">DPIP</a>, ship a connector.</p>
+
+      <p>If you just <strong>hate how the web works</strong> — share this. Talk about it. The internet is good. We can make it good again.</p>
+
+      <hr>
+
+      <p>The protocol is open. The work is real. The web was built for eyes.</p>
+
+      <p>The next one will be built for minds.</p>
+
+      <p><strong>Let's get to work.</strong></p>
+
+    </article>
+
+    <footer>
+      <p><a href="https://github.com/daena-protocol/spec">Specification</a> · <a href="https://github.com/daena-protocol/daena">Reference implementation</a> · <a href="https://github.com/daena-protocol/examples">Examples</a> · <a href="https://github.com/daena-protocol/spec/discussions">Discussions</a></p>
+      <p>Daena is in early specification. Editor: Pouyan Ahmadpour. Specification text under CC-BY-4.0. Code under Apache-2.0.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
